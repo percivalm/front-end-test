@@ -1,7 +1,7 @@
 (function () {
 
     angular.module('qudini.QueueApp', [])
-        .controller('QueueCtrl', QueueCtrl)
+        .controller('QueueCtrl', ['$scope', '$http', QueueCtrl]);
 
     /**
      * Bonus points - manipulating the without waiting for the

@@ -21,7 +21,8 @@
     <h2>Served customers</h2>
     <ul class="Queue-customer-served-list">
         <li ng-repeat="customerData in customersServed">
-            <customer customer="customerData" on-served="onCustomerServed" on-removed="onCustomerRemoved"></customer>
+            <!-- <customer customer="customerData" on-served="onCustomerServed" on-removed="onCustomerRemoved"></customer> -->
+            <customer customer="customerData"></customer>
         </li>
     </ul>
 </body>

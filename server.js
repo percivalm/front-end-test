@@ -17,6 +17,8 @@ var servedCustomers = [
 ];
 
 function serveCustomer(id){
+    console.log("Serving customer ID:", id);
+
     customers = customers.filter(function(customer){
         if(customer.id == id){
             customer.status = 'served';
@@ -30,6 +32,9 @@ function serveCustomer(id){
 
 function addCustomer(customer){
     customer.id = uuid.v4();
+
+    console.log("New customer:", JSON.stringify(customer));
+
     customers.push(customer);
 }
 
