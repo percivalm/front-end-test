@@ -22,7 +22,8 @@
             link: function(scope){
 
                 // calculate how long the customer has queued for
-                scope.queuedTime = new Date() - new Date(scope.customer.joinedTime);
+                scope.queuedTime = moment(scope.customer.joinedTime).fromNow();                
+                scope.servedTime = scope.customer.servedTime ? moment(new Date(scope.customer.servedTime)).format('LTS'):'';
 
                 scope.remove = function(){
                     $http({
