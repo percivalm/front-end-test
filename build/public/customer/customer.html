@@ -1,0 +1,18 @@
+<div class="Customer">
+    <div class="row">
+        <div class="col-sm-4">
+            <span class="list-group-item-heading">{{ customer.name }}</span>
+            <p ng-if="customer.status != 'served'">{{ queuedTime }}</p>
+            <p ng-if="customer.status == 'served'">{{ servedTime }}</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="list-group-item-text">{{ customer.product.name }}</div>
+        </div>
+        <div class="col-sm-4">
+            <span class="pull-right">
+                <button class="btn btn-default btn-xs qa-customer-rem" ng-if="customer.status != 'served'" ng-click="remove()">Remove</button>
+                <button class="btn btn-default btn-xs qa-customer-srv" ng-if="customer.status != 'served'" ng-click="serve()">Serve</button>
+            </span>
+        </div>
+    </div>
+</div>

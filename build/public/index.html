@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Queue App</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles/styles.css" rel="stylesheet">
+    <script src="/bower_components/angularjs/angular.min.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/angular-moment/angular-moment.js"></script>
+    <!-- for now, manually added after gulp build  -->
+    <script src="/app.min.js"></script>
+</head>
+<body class="Queue" ng-app="qudini.QueueApp" ng-controller="QueueCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title qa-title">Add Customer</h2>
+                    </div>
+                    <div class="panel-body">
+                        <add-customer on-added="onCustomerAdded"></add-customer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title qa-title">Queueing Customers</h2>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group Queue-customer-list">
+                            <li class="list-group-item" ng-repeat="customerData in customers">
+                                <customer customer="customerData" on-served="onCustomerServed" on-removed="onCustomerRemoved"></customer>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title qa-title">Served customers</h2>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group Queue-customer-served-list">
+                            <li class="list-group-item" ng-repeat="customerData in customersServed">
+                                <!-- <customer customer="customerData" on-served="onCustomerServed" on-removed="onCustomerRemoved"></customer> -->
+                                <customer customer="customerData"></customer>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
