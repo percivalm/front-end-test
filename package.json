@@ -1,0 +1,35 @@
+{
+  "name": "front-end-test",
+  "version": "1.0.0",
+  "description": "The structure of this application is based off directives acting as components handling their own data. The backend is a simple\r NodeJS server serving in memory JSON objects. All the dependencies are versioned for your convenience :).",
+  "main": "\u001b[D\u001b[D\u001b[\u001b[F\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[server.js",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "express": "^4.12.3",
+    "del": "^2.2.0",
+    "gulp": "^3.8.11",
+    "gulp-run": "^1.6.7",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-serve": "^0.3.1",
+    "node-static": "^0.7.6",
+    "node-uuid": "^1.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/percivalm/front-end-test.git"
+  },
+  "author": "percivalm",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/percivalm/front-end-test/issues"
+  },
+  "homepage": "https://github.com/percivalm/front-end-test#readme"
+}
