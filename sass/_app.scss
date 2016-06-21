@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+.qa-title {
+    color: $box-title-color;
+    font-weight: 400;
+}
+
+.qa-customer-rem{
+    color: darken($customer-remove-color, 20%);
+    &:hover {
+        color: $customer-remove-color;
+    }
+}
+
+.qa-customer-srv {
+    color: darken($customer-serve-color, 20%);
+    &:hover{
+        color: lighten($customer-serve-color, 20%);
+    }
+}

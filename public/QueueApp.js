@@ -1,6 +1,6 @@
 (function () {
 
-    angular.module('qudini.QueueApp', [])
+    angular.module('qudini.QueueApp', ['ui.bootstrap'])
         .controller('QueueCtrl', ['$scope', '$http', QueueCtrl]);
 
     /**

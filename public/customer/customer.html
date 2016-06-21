@@ -2,6 +2,8 @@
     <span>{{ customer.name }}</span>
     <span>{{ customer.product.name }}</span>
     <span>{{ customer.queuedTime }}</span>
-    <button ng-if="customer.status != 'served'" ng-click="remove()">Remove</button>
-    <button ng-if="customer.status != 'served'" ng-click="serve()">Serve</button>
+    <span class="pull-right">
+        <button class="btn btn-default btn-xs qa-customer-rem" ng-if="customer.status != 'served'" ng-click="remove()">Remove</button>
+        <button class="btn btn-default btn-xs qa-customer-srv" ng-if="customer.status != 'served'" ng-click="serve()">Serve</button>
+    </span>
 </div>
